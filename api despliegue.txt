@@ -1,0 +1,83 @@
+
+
+
+https://localhost:7277/insertarProducto
+insert producto
+{
+     "IdCategoria":1,
+     "nombre":"Aguila",
+     "precio" :2500,
+     "cantidad":5,
+     "estado" :true
+}
+
+procedimiento
+
+create PROCEDURE [dbo].[insertProducto]
+
+@ID_Categoria int
+,@Nombre_Producto varchar(50)
+,@Precio int
+,@Cantidad int
+,@Fecha_Ingreso datetime
+,@Estado bit
+AS
+BEGIN
+	insert into Producto (
+      ID_Categoria
+      ,Nombre_Producto
+      ,Precio
+      ,Cantidad
+      ,Fecha_Ingreso
+      ,Estado) values(@ID_Categoria
+      ,@Nombre_Producto
+      ,@Precio
+      ,@Cantidad
+      ,@Fecha_Ingreso
+      ,@Estado)
+END
+
+
+https://localhost:7277/insertarUsuario
+insert usuario
+
+
+{
+         "Rol":1,
+         "NombreUsuario":"LUISMIGUELER",
+         "Nombre":"LUIS",
+         "Correo":"LUISDAMIAN@GMAIL.COM",
+         "password":"432",
+         "cedula":"32432"
+}
+
+
+procedimiento
+
+
+Create PROCEDURE [dbo].[insertUsuario]
+
+       @ID_Rol int
+      ,@Nombre_Usuario nvarchar(50)
+      ,@Nombre nvarchar(50)
+      ,@Correo nvarchar(50)
+      ,@Fecha_Registro datetime
+      ,@password nvarchar(50)
+      ,@Cedula int
+AS
+BEGIN
+	insert into usuario (
+      ID_Rol
+      ,Nombre_Usuario 
+      ,Nombre 
+      ,Correo 
+      ,Fecha_Registro 
+      ,password 
+      ,Cedula) values(@ID_Rol
+      ,@Nombre_Usuario 
+      ,@Nombre 
+      ,@Correo 
+      ,@Fecha_Registro 
+      ,@password 
+      ,@Cedula)
+END
