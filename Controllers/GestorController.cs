@@ -55,8 +55,20 @@ public class GestorController:ControllerBase{
     {
 
         Connection Con=new Connection();
-        string mensaje=Con.insert($"EXECUTE insertUsuario {user.Rol},'{user.NombreUsuario}','{user.Nombre}','{user.Correo}','{DateTime.Now.ToString("yyyy/MM/dd HH:mm")}','{user.Correo}',{user.cedula}");
+        string mensaje=Con.insert($"EXECUTE insertUsuario {user.Rol},'{user.NombreUsuario}','{user.Nombre}','{user.Correo}','{DateTime.Now.ToString("yyyy/MM/dd HH:mm")}','{user.password}',{user.cedula}");
         
+        return Ok(mensaje);
+
+
+    }
+
+    [HttpPost]
+    [Route("/editarProducto")]
+    public IActionResult editarProducto(int id, Producto producto,DateTime fechaModificacion)
+    {
+
+        Connection Con=new Connection();
+        string mensaje=Con.insert($"update producto set ID_Categoria={producto.IdCategoria} ,Nombre_Producto='{producto.nombre}',Precio={producto.precio},Cantidad={producto.cantidad},Estado={producto.estado} where ID={id}");
         return Ok(mensaje);
 
 

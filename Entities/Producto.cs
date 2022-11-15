@@ -4,7 +4,7 @@ namespace api_LS{
         public string nombre { get; set; }
         public int precio { get; set; }
         public int cantidad { get; set; }
-        public bool estado { get; set; }
+        public int estado { get; set; }
         // public Producto(){
 
         // }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jaide\\Documents\\Apis\\api LS\\api LS.csproj": {}
+    "C:\\Users\\jaide\\Documents\\Apis\\ApiDespliegue\\api LS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jaide\\Documents\\Apis\\api LS\\api LS.csproj": {
+    "C:\\Users\\jaide\\Documents\\Apis\\ApiDespliegue\\api LS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jaide\\Documents\\Apis\\api LS\\api LS.csproj",
+        "projectUniqueName": "C:\\Users\\jaide\\Documents\\Apis\\ApiDespliegue\\api LS.csproj",
         "projectName": "api LS",
-        "projectPath": "C:\\Users\\jaide\\Documents\\Apis\\api LS\\api LS.csproj",
+        "projectPath": "C:\\Users\\jaide\\Documents\\Apis\\ApiDespliegue\\api LS.csproj",
         "packagesPath": "C:\\Users\\jaide\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jaide\\Documents\\Apis\\api LS\\obj\\",
+        "outputPath": "C:\\Users\\jaide\\Documents\\Apis\\ApiDespliegue\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
