@@ -64,11 +64,11 @@ public class GestorController:ControllerBase{
 
     [HttpPost]
     [Route("/editarProducto")]
-    public IActionResult editarProducto(int id, Producto producto,DateTime fechaModificacion)
+    public IActionResult editarProducto(ProductoEditar producto)
     {
 
         Connection Con=new Connection();
-        string mensaje=Con.insert($"update producto set ID_Categoria={producto.IdCategoria} ,Nombre_Producto='{producto.nombre}',Precio={producto.precio},Cantidad={producto.cantidad},Estado={producto.estado} where ID={id}");
+        string mensaje=Con.insert($"update producto set ID_Categoria={producto.IdCategoria} ,Nombre_Producto='{producto.nombre}',Precio={producto.precio},Cantidad={producto.cantidad},Estado={producto.estado} where ID={producto.id}");
         return Ok(mensaje);
 
 
