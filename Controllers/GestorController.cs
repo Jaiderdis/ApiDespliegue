@@ -22,6 +22,21 @@ public class GestorController:ControllerBase{
 
 
     }
+
+
+    [HttpGet]
+    [Route("/Producto")]
+    public IActionResult ConsultarProductos(int id)
+    {
+        Respuesta res=new Respuesta();
+        string json;
+        Connection Con=new Connection();
+        res=Con.Consultar($"Select * from producto where id={id}");
+        json = JsonConvert.SerializeObject(res);
+        return Ok(json);
+
+
+    }
     [HttpGet]
     [Route("/usuarios")]
     public IActionResult ConsultarUsuarios()
@@ -30,6 +45,19 @@ public class GestorController:ControllerBase{
         string json;
         Connection Con=new Connection();
         res=Con.Consultar("Select * from Usuario");
+        json = JsonConvert.SerializeObject(res);
+        return Ok(json);
+
+
+    }
+    [HttpGet]
+    [Route("/usuario")]
+    public IActionResult ConsultarUsuarios(int id)
+    {
+        Respuesta res=new Respuesta();
+        string json;
+        Connection Con=new Connection();
+        res=Con.Consultar($"Select * from Usuario where id={id}");
         json = JsonConvert.SerializeObject(res);
         return Ok(json);
 
